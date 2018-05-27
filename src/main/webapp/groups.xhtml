@@ -3,11 +3,79 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://primefaces.org/ui">
 <f:view>
 
-    <p:dataTable value="#{groupsController.teams}" var="team">
-        <p:column headerText="Name">
-            <h:outputText value="#{team.name}" />
-        </p:column>
-    </p:dataTable>
+    <h:form>
+        <h:panelGrid columns="3">
+            <h:outputText value="Grupa A" />
+            <p:selectManyCheckbox id="groupA" value="#{groupsController.selectedA}">
+                <f:selectItems value="#{groupsController.groupA}" var="team" itemLabel="#{team.name}" />
+                <f:validator validatorId="checkboxValidator" />
+                <f:ajax execute="checkbox" render="checkboxmessage" />
+            </p:selectManyCheckbox>
+            <h:message for="groupA" id="checkboxmessageA" />
+
+            <h:outputText value="Grupa B" />
+            <p:selectManyCheckbox id="groupB" value="#{groupsController.selectedB}">
+                <f:selectItems value="#{groupsController.groupB}" var="team" itemLabel="#{team.name}" />
+                <f:validator validatorId="checkboxValidator" />
+                <f:ajax execute="checkbox" render="checkboxmessage" />
+            </p:selectManyCheckbox>
+            <h:message for="groupB" id="checkboxmessageB" />
+
+            <h:outputText value="Grupa C" />
+            <p:selectManyCheckbox id="groupC" value="#{groupsController.selectedC}">
+                <f:selectItems value="#{groupsController.groupC}" var="team" itemLabel="#{team.name}" />
+                <f:validator validatorId="checkboxValidator" />
+                <f:ajax execute="checkbox" render="checkboxmessage" />
+            </p:selectManyCheckbox>
+            <h:message for="groupC" id="checkboxmessageC" />
+
+            <h:outputText value="Grupa D" />
+            <p:selectManyCheckbox id="groupD" value="#{groupsController.selectedD}">
+                <f:selectItems value="#{groupsController.groupD}" var="team" itemLabel="#{team.name}" />
+                <f:validator validatorId="checkboxValidator" />
+                <f:ajax execute="checkbox" render="checkboxmessage" />
+            </p:selectManyCheckbox>
+            <h:message for="groupD" id="checkboxmessageD" />
+
+            <h:outputText value="Grupa E" />
+            <p:selectManyCheckbox id="groupE" value="#{groupsController.selectedE}">
+                <f:selectItems value="#{groupsController.groupE}" var="team" itemLabel="#{team.name}" />
+                <f:validator validatorId="checkboxValidator" />
+                <f:ajax execute="checkbox" render="checkboxmessage" />
+            </p:selectManyCheckbox>
+            <h:message for="groupE" id="checkboxmessageE" />
+
+            <h:outputText value="Grupa F" />
+            <p:selectManyCheckbox id="groupF" value="#{groupsController.selectedF}">
+                <f:selectItems value="#{groupsController.groupF}" var="team" itemLabel="#{team.name}" />
+                <f:validator validatorId="checkboxValidator" />
+                <f:ajax execute="checkbox" render="checkboxmessage" />
+            </p:selectManyCheckbox>
+            <h:message for="groupF" id="checkboxmessageF" />
+
+            <h:outputText value="Grupa G" />
+            <p:selectManyCheckbox id="groupG" value="#{groupsController.selectedG}">
+                <f:selectItems value="#{groupsController.groupG}" var="team" itemLabel="#{team.name}" />
+                <f:validator validatorId="checkboxValidator" />
+                <f:ajax execute="checkbox" render="checkboxmessage" />
+            </p:selectManyCheckbox>
+            <h:message for="groupG" id="checkboxmessageG" />
+
+            <h:outputText value="Grupa H" />
+            <p:selectManyCheckbox id="groupH" value="#{groupsController.selectedH}">
+                <f:selectItems value="#{groupsController.groupH}" var="team" itemLabel="#{team.name}" />
+                <f:validator validatorId="checkboxValidator" />
+                <f:ajax execute="checkbox" render="checkboxmessage" />
+            </p:selectManyCheckbox>
+            <h:message for="groupH" id="checkboxmessageH" />
+
+            <p:commandButton action="#{groupsController.check}" />
+        </h:panelGrid>
+
+
+
+
+    </h:form>
 
 </f:view>
 </html>

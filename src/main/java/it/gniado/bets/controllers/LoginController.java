@@ -14,12 +14,8 @@ public class LoginController {
     private String username;
     private String password;
 
-    private final LoginService loginService;
-
     @Inject
-    public LoginController(LoginService loginService) {
-        this.loginService = loginService;
-    }
+    private LoginService loginService;
 
     public String authenticate() {
         if (loginService.authenticate(username, password)) {

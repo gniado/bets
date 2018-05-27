@@ -31,6 +31,12 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.primefaces.themes</groupId>
+			<artifactId>all-themes</artifactId>
+			<version>${all-themes.version}</version>
+		</dependency>
+
+		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 			<version>${guava.version}</version>
@@ -71,6 +77,14 @@
 		</plugins>
 	</build>
 
+	<repositories>
+		<repository>
+			<id>prime-repo</id>
+			<name>PrimeFaces Maven Repository</name>
+			<url>http://repository.primefaces.org</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -82,5 +96,6 @@
 		<hibernate.version>5.3.1.Final</hibernate.version>
 		<commons-lang3.version>3.7</commons-lang3.version>
 		<liquibase.version>3.6.1</liquibase.version>
+		<all-themes.version>1.0.10</all-themes.version>
 	</properties>
 </project>
