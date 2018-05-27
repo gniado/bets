@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+		xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+	<changeSet id="201805271134" author="gniado">
+		<createTable tableName="User">
+			<column name="id" type="BIGINT" autoIncrement="true">
+				<constraints primaryKey="true" primaryKeyName="PK-User-Id-275181134" />
+			</column>
+			<column name="name" type="VARCHAR(255)" />
+			<column name="password" type="VARCHAR(255)" />
+			<column name="points" type="BIGINT" />
+		</createTable>
+
+		<createTable tableName="Team">
+			<column name="id" type="BIGINT" autoIncrement="true">
+				<constraints primaryKey="true" primaryKeyName="PK-Team-Id-275181134" />
+			</column>
+			<column name="name" type="VARCHAR(255)" />
+			<column name="teamGroup" type="VARCHAR(255)" />
+			<column name="promoted" type="BOOLEAN" />
+		</createTable>
+	</changeSet>
+
+	<changeSet id="201805271229" author="gniado">
+		<insert tableName="User">
+			<column name="name" type="VARCHAR(255)">gniado</column>
+			<column name="password" type="VARCHAR(255)">gg5199110</column>
+			<column name="points" type="BIGINT">0</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Rosja</column>
+			<column name="teamGroup" type="VARCHAR(255)">A</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Arabia Saudyjska</column>
+			<column name="teamGroup" type="VARCHAR(255)">A</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Egipt</column>
+			<column name="teamGroup" type="VARCHAR(255)">A</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Urugwaj</column>
+			<column name="teamGroup" type="VARCHAR(255)">A</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Portugalia</column>
+			<column name="teamGroup" type="VARCHAR(255)">B</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Hiszpania</column>
+			<column name="teamGroup" type="VARCHAR(255)">B</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Maroko</column>
+			<column name="teamGroup" type="VARCHAR(255)">B</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Iran</column>
+			<column name="teamGroup" type="VARCHAR(255)">B</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Francja</column>
+			<column name="teamGroup" type="VARCHAR(255)">C</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Australia</column>
+			<column name="teamGroup" type="VARCHAR(255)">C</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Peru</column>
+			<column name="teamGroup" type="VARCHAR(255)">C</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Dania</column>
+			<column name="teamGroup" type="VARCHAR(255)">C</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Argentyna</column>
+			<column name="teamGroup" type="VARCHAR(255)">D</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Islandia</column>
+			<column name="teamGroup" type="VARCHAR(255)">D</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Chorwacja</column>
+			<column name="teamGroup" type="VARCHAR(255)">D</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Nigeria</column>
+			<column name="teamGroup" type="VARCHAR(255)">D</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Brazylia</column>
+			<column name="teamGroup" type="VARCHAR(255)">E</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Szwajcaria</column>
+			<column name="teamGroup" type="VARCHAR(255)">E</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Kostaryka</column>
+			<column name="teamGroup" type="VARCHAR(255)">E</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Serbia</column>
+			<column name="teamGroup" type="VARCHAR(255)">E</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Niemcy</column>
+			<column name="teamGroup" type="VARCHAR(255)">F</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Meksyk</column>
+			<column name="teamGroup" type="VARCHAR(255)">F</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Szwecja</column>
+			<column name="teamGroup" type="VARCHAR(255)">F</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Korea Południowa</column>
+			<column name="teamGroup" type="VARCHAR(255)">F</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Belgia</column>
+			<column name="teamGroup" type="VARCHAR(255)">G</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Panama</column>
+			<column name="teamGroup" type="VARCHAR(255)">G</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Tunezja</column>
+			<column name="teamGroup" type="VARCHAR(255)">G</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Anglia</column>
+			<column name="teamGroup" type="VARCHAR(255)">G</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Polska</column>
+			<column name="teamGroup" type="VARCHAR(255)">H</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Senegal</column>
+			<column name="teamGroup" type="VARCHAR(255)">H</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Kolumbia</column>
+			<column name="teamGroup" type="VARCHAR(255)">H</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+		<insert tableName="Team">
+			<column name="name" type="VARCHAR(255)">Japonia</column>
+			<column name="teamGroup" type="VARCHAR(255)">H</column>
+			<column name="promoted" type="BOOLEAN">false</column>
+		</insert>
+	</changeSet>
+</databaseChangeLog>
